@@ -70,7 +70,7 @@ body {
 
 /*header section*/
 .hero_area {
-  height: 100vh;
+  height: 150vh;
   background-color: #051530;
   background-image: url(../images/hero-bg.jpg);
   background-size: cover;

@@ -71,13 +71,23 @@
       </div>
     </header>
     <!-- end header section -->
-    <!-- slider section -->
+    <!-- mainbody section -->
     <section >
       <div class="container">
-        <div > 
-          <a href="">
-            <img src="public/images/reboot.jpg" alt="">
-          </a>
+        <div class="row">
+          <div class="col-md-4"">
+            <img style="width: 400px" src="public/images/reboot.jpg" alt="">
+          </div>
+          <div class="col-md-4"">
+            <img style="width: 400px" src="public/images/OIG.jpg" alt="">
+          </div>
+          <div class="col-md-4"">
+            <img style="width: 400px" src="public/images/reboot2.jpg" alt="">
+          </div>
+        </div>
+        <div> 
+           
+
                   
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -86,7 +96,7 @@
         </div>
        </div>
     </section>
-    <!-- end slider section -->
+    <!-- end mainbody section -->
   </div>
 
   <!-- do section -->
@@ -111,16 +121,14 @@
               </h2>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud
+              Reboot is a Discord server supporting the recovery and mental health community.  At the core is a group of individuals holding and going to meetings together, supporting each others recovery needs, and growing together. We also have a fun recovery bot.
             </p>
             <div>
               <a href="">
                 Read More
               </a>
             </div>
+
           </div>
         </div>
       </div>
@@ -131,15 +139,27 @@
 
 
   <!-- meetings section -->
-  <section class="work_section layout_padding">
+  <section class="">
     <div class="container">
       <div class="heading_container">
         <h2>
-          Meetings
+          Meetings are at the heart of our ecosystem. 
         </h2>
         <p>
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation
+          <ul id="meeting_list">
+            <li>          
+              <div class="row meeting border">
+                 Reboot Saturday meeting of Recovery Dharma <a href=https://discord.gg/u9HmndQXFG?event=1179906495794651221>Join us on Discord 4pm EST</a>
+              </div>
+            </li>
+            <li >
+              <div class="row meeting border">
+                Books and bots: our monthly book club with ReBot.  Time:  3rd Sunday of the Month 6pm PST
+              </div>
+            </li>
+          </ul>
+
+
         </p>
       </div>
 
@@ -244,30 +264,13 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- owl carousel script 
-    -->
-  <script type="text/javascript">
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 0,
-      navText: [],
-      center: true,
-      autoplay: true,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        1000: {
-          items: 3
-        }
-      }
-    });
-  </script>
-  <!-- end owl carousel script -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script type="text/javascript" src="loadCalendarOnPage.js" type="module"></script>
 
+
+
+  
 </body>
 
 </html>

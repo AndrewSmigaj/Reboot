@@ -1,0 +1,55 @@
+//in bot.js
+//import OpenAI from "openai";
+
+//const openai = new OpenAI();
+const axios == require("axios")
+
+async function ask("prompt") {
+  const message = {
+    messages: [
+      {
+        role: "system",
+        content: "You are a helpful assistant designed to output JSON.",
+      },
+      { role: "user", content: "Who won the world series in 2020?" },
+    ],
+    model: "gpt-3.5-turbo-1106",
+    response_format: { type: "json_object" },
+  };
+
+  axios.post("https://api.openai.com/v1/chat/completions",message,{
+	headers: {
+		'Content-Type': 'application/json',
+		'Authorization': 'Bearer 
+
+	}
+
+  console.log(messages);
+}
+
+
+const { Client, Events, GatewayIntentBits } = require('discord.js'); //v14.6.0
+const token = "MTE3OTkyNzExMDk5MTc0MDk4OA.GLVJep.XpKQzFUmNpG6cS-M5B5InV1309glrXt-Tyihc8";
+
+// Create a new client instance
+const client = new Client({
+  intents:
+    [GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent]
+});
+
+client.once(Events.ClientReady, c => {
+  console.log(`Ready! Logged in as ${c.user.tag}`);
+});
+
+client.on(Events.MessageCreate, async message => {
+  if (message.content.substring(0, 1) === "!") {
+    const prompt = message.content.substring(1); //remove the exclamation mark from the message
+    const answer = ask(prompt);
+    client.channels.fetch(message.channelId).then(channel => channel.send(answer));
+  }
+});
+
+// Log in to Discord with your client's token
+client.login(token);
